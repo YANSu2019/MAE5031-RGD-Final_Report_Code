@@ -86,7 +86,7 @@ while ferr>1e-7
           C(i,i-1)=-1.5*h(i)*h(i)*dh(i)*p(i)*dx*F(i)-0.5*h(i)*h(i)*h(i)*dF(i)*dx*p(i)+h(i)*h(i)*h(i)*p(i)*F(i)+3*mu*U*h(i)*dx/h0/p0;
           C(i,i)=-2*h(i)*h(i)*h(i)*p(i)*F(i)-6*mu*U*dh(i)*dx*dx/h0/p0;
           C(i,i+1)=1.5*h(i)*h(i)*dh(i)*p(i)*dx*F(i)+0.5*h(i)*h(i)*h(i)*dF(i)*dx*p(i)+h(i)*h(i)*h(i)*p(i)*F(i)-3*mu*U*h(i)*dx/h0/p0;
-          D(i)=-h(i)*h(i)*h(i)*0.25*(p(i+1)-p(i-1))*(p(i+1)-p(i-1));
+          D(i)=-h(i)*h(i)*h(i)*F(i)*0.25*(p(i+1)-p(i-1))*(p(i+1)-p(i-1));
     end
     C(1,1)=1;
     C(xDim,xDim)=1;
